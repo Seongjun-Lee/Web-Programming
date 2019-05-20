@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a9ab3c61-c4de-4b7f-8afa-72188a8be1fb" name="APMSETUP" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
