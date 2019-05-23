@@ -20,6 +20,9 @@
 				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
 				formats to work correctly.
 			-->
+                <div name="Register" class="align-set">
+                    <div class="button fixed">회원가입</div>
+                </div>
 				<section id="banner" data-video="images/banner">
                 <!-- 배경 이미지는 고사양 게임 스크리샷 흐리게 -->
 					<div class="inner">
@@ -40,40 +43,54 @@
 						<div class="thumbnails">
 
 							<div name = "PC" class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+								<div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
 								<div class="inner">
-									<h3>Nascetur nunc varius commodo</h3>
-									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit data-poptrox="youtube,800x400">Select</a>
+									<h3>PC</h3>
+									<p>PC / VR</p>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button PC fit" data-poptrox="youtube,800x400">Select</a>
 								</div>
+                                </div>
 							</div>
 
-                            <div name = "Sony" class="box">
-                                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+                            <div name = "PS" class="box">
+                                <div class="image fit"><img src="images/PS4x400.jpg" alt="" />
                                 <div class="inner">
-                                    <h3>Nascetur nunc varius commodo</h3>
-                                    <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                                    <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Select</a>
+                                    <h3>Sony</h3>
+                                    <p>Series of PS / PSP / PSVR</p>
+                                    <a href="https://youtu.be/s6zR2T9vn2c" class="button PS fit" data-poptrox="youtube,800x400">Select</a>
+                                </div>
                                 </div>
                             </div>
 
 							<div name = "MS" class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+                                <div class="image fit"><img src="images/Xboxx400.jpg" alt="" />
 								<div class="inner">
-									<h3>Nascetur nunc varius commodo</h3>
-									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Select</a>
+                                    <h3>Microsoft</h3>
+									<p>Series of XBOX</p>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button MS fit" data-poptrox="youtube,800x400">Select</a>
 								</div>
+                                </div>
 							</div>
 
 							<div name = "Nintendo" class="box">
-								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+                                <div class="image fit"><img src="images/Nintendox400.jpg" alt="" />
 								<div class="inner">
-									<h3>Nascetur nunc varius commodo</h3>
-									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Select</a>
+                                    <h3>Nintendo</h3>
+									<p>Series of DS / Wii / Switch</p>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button NIN fit" data-poptrox="youtube,800x400">Select</a>
 								</div>
+                                </div>
 							</div>
+
+                            <div name = "Mobile" class="box">
+                                <div class="image fit"><img src="images/Mobilex400.PNG" alt="" />
+                                <div class="inner">
+                                    <h3>Mobile</h3>
+                                    <p>Android / IOS</p>
+                                    <a href="https://youtu.be/s6zR2T9vn2c" class="button MB fit" data-poptrox="youtube,800x400">Select</a>
+                                </div>
+                                </div>
+                            </div>
 
 						</div>
 

@@ -540,8 +540,9 @@
 
 	.box {
 		border-radius: 4px;
+		/*border: solid 5px rgba(255, 255, 255, 1);*/
 		margin-bottom: 2em;
-		background: #2c2c32;
+		background: rgba(40, 40, 48, 1);
 		text-align: center;
 	}
 
@@ -562,6 +563,8 @@
 		.box .inner {
 			padding: 1.5em;
 			width: 100% !important;
+			/*color: #000000;*/
+			font-size: 100%;
 		}
 
 			@media screen and (max-width: 480px) {
@@ -577,6 +580,37 @@
 			border-radius: 0;
 			padding: 0;
 		}
+
+		/*
+	input[type="box"].PC,
+	box.PC,
+	.box.PC {
+		border: solid 5px rgba(0, 0, 0, 0.8);
+	}
+
+	input[type="box"].PS,
+	box.PS,
+	.box.PS {
+		border: solid 5px rgba(32, 32, 255, 1);
+	}
+
+	input[type="box"].MS,
+	box.MS,
+	.box.MS {
+		border: solid 5px rgba(32, 255, 32, 0.8);
+	}
+
+	input[type="box"].NIN,
+	box.NIN,
+	.box.NIN {
+		border: solid 5px rgba(255, 32, 32, 1);
+	}
+
+	input[type="box"].MB,
+	box.MB,
+	.box.MB {
+		border: solid 5px rgba(255, 255, 255, 1);
+	}*/
 
 /* Icon */
 
@@ -944,6 +978,33 @@
 		white-space: nowrap;
 	}
 
+		input[type="button"].fixed,
+		button.fixed,
+		.button.fixed {
+			height: 60px;
+			width: 100px;
+			font-size: 13px;
+			color: #FFFFFF;
+			position:fixed;
+			bottom:5px;
+			right:5px;
+			background-color:#BDBDBD;
+			vertical-align: middle;
+			line-height: 60px;
+			}
+
+			input[type="button"].fixed:hover
+			button.fixed:hover,
+			.button.fixed:hover {
+				background-color: #999999;
+			}
+
+			input[type="button"].fixed:active
+			button.fixed:active,
+			.button.fixed:active {
+				background-color: #ABABAB;
+			}
+
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
@@ -1018,76 +1079,124 @@
 			opacity: 0.25;
 		}
 
-		input[type="submit"].style2,
-		input[type="reset"].style2,
-		input[type="button"].style2,
-		button.style2,
-		.button.style2 {
-			background-color: #7f92cf;
+		input[type="submit"].PC,
+		input[type="reset"].PC,
+		input[type="button"].PC,
+		button.PC,
+		.button.PC {
+			background-color: #7E7E7E;
 		}
 
-			input[type="submit"].style2:hover,
-			input[type="reset"].style2:hover,
-			input[type="button"].style2:hover,
-			button.style2:hover,
-			.button.style2:hover {
-				background-color: #92a2d6;
+			input[type="submit"].PC:hover,
+			input[type="reset"].PC:hover,
+			input[type="button"].PC:hover,
+			button.PC:hover,
+			.button.PC:hover {
+				background-color: #5A5A5A;
 			}
 
-			input[type="submit"].style2:active,
-			input[type="reset"].style2:active,
-			input[type="button"].style2:active,
-			button.style2:active,
-			.button.style2:active {
-				background-color: #6c82c8;
+			input[type="submit"].PC:active,
+			input[type="reset"].PC:active,
+			input[type="button"].PC:active,
+			button.PC:active,
+			.button.PC:active {
+				background-color: #6C6C6C;
 			}
 
-		input[type="submit"].style3,
-		input[type="reset"].style3,
-		input[type="button"].style3,
-		button.style3,
-		.button.style3 {
-			background-color: #9d7ed0;
+		input[type="submit"].PS,
+		input[type="reset"].PS,
+		input[type="button"].PS,
+		button.PS,
+		.button.PS {
+			background-color: #6D6CFF;
 		}
 
-			input[type="submit"].style3:hover,
-			input[type="reset"].style3:hover,
-			input[type="button"].style3:hover,
-			button.style3:hover,
-			.button.style3:hover {
-				background-color: #ab91d7;
+			input[type="submit"].PS:hover,
+			input[type="reset"].PS:hover,
+			input[type="button"].PS:hover,
+			button.PS:hover,
+			.button.PS:hover {
+				background-color: #4948FF;
 			}
 
-			input[type="submit"].style3:active,
-			input[type="reset"].style3:active,
-			input[type="button"].style3:active,
-			button.style3:active,
-			.button.style3:active {
-				background-color: #8f6bc9;
+			input[type="submit"].PS:active,
+			input[type="reset"].PS:active,
+			input[type="button"].PS:active,
+			button.PS:active,
+			.button.PS:active {
+				background-color: #5B5AFF;
 			}
 
-		input[type="submit"].style4,
-		input[type="reset"].style4,
-		input[type="button"].style4,
-		button.style4,
-		.button.style4 {
-			background-color: #9d7ed0;
+		input[type="submit"].MS,
+		input[type="reset"].MS,
+		input[type="button"].MS,
+		button.MS,
+		.button.MS {
+			background-color: #89FF82;
 		}
 
-			input[type="submit"].style4:hover,
-			input[type="reset"].style4:hover,
-			input[type="button"].style4:hover,
-			button.style4:hover,
-			.button.style4:hover {
-				background-color: #ab91d7;
+			input[type="submit"].MS:hover,
+			input[type="reset"].MS:hover,
+			input[type="button"].MS:hover,
+			button.MS:hover,
+			.button.MS:hover {
+				background-color: #65FF5E;
 			}
 
-			input[type="submit"].style4:active,
-			input[type="reset"].style4:active,
-			input[type="button"].style4:active,
-			button.style4:active,
-			.button.style4:active {
-				background-color: #8f6bc9;
+			input[type="submit"].MS:active,
+			input[type="reset"].MS:active,
+			input[type="button"].MS:active,
+			button.MS:active,
+			.button.MS:active {
+				background-color: #77FF70;
+			}
+
+		input[type="submit"].NIN,
+		input[type="reset"].NIN,
+		input[type="button"].NIN,
+		button.NIN,
+		.button.NIN {
+			background-color: #FF6C6C;
+		}
+
+			input[type="submit"].NIN:hover,
+			input[type="reset"].NIN:hover,
+			input[type="button"].NIN:hover,
+			button.NIN:hover,
+			.button.NIN:hover {
+				background-color: #FF4848;
+			}
+
+			input[type="submit"].NIN:active,
+			input[type="reset"].NIN:active,
+			input[type="button"].NIN:active,
+			button.NIN:active,
+			.button.NIN:active {
+				background-color: #FF5A5A;
+			}
+
+		input[type="submit"].MB,
+		input[type="reset"].MB,
+		input[type="button"].MB,
+		button.MB,
+		.button.MB {
+			background-color: #FFCA6C;
+		}
+
+			input[type="submit"].MB:hover,
+			input[type="reset"].MB:hover,
+			input[type="button"].MB:hover,
+			button.MB:hover,
+			.button.MB:hover {
+				background-color: #FFA648;
+			}
+
+			input[type="submit"].MB:active,
+			input[type="reset"].MB:active,
+			input[type="button"].MB:active,
+			button.MB:active,
+			.button.MB:active {
+				background-color: #FFB85A;
 			}
 
 		@media screen and (max-width: 480px) {
@@ -1429,3 +1538,7 @@
 			}
 
 		}
+
+	.align-set {
+		text-align: center;
+	}
