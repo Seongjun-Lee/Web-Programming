@@ -242,10 +242,25 @@ button.MB:active,
     width: 95%;
 }
 
+.Register_Table {
+    margin: auto;
+    margin-top: 15%;
+    border-radius: 5px;
+    background-color: #323232;
+    width: 75%;
+}
+
 .Login_Table td,
 .Login_Table tr {
     vertical-align: middle;
     padding: 2%;
+    text-align: center;
+}
+
+.Register_Table td,
+.Register_Table tr {
+    vertical-align: middle;
+    padding: 1%;
     text-align: center;
 }
 
