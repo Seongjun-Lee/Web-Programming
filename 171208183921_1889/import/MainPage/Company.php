@@ -44,7 +44,8 @@
             <div class="inner">
                 <h3>Mobile</h3>
                 <p>Android / IOS</p>
-                <a class="button MB fit" for="open-pop">Select</a>
+                <!--a class="button MB fit" for="open-pop">Select</a-->
+                <label class="button MB fit" for="Mobile-pop">Select</label>
             </div>
         </div>
     </div>

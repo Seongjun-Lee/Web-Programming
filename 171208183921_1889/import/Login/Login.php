@@ -27,6 +27,6 @@ echo "
         <button>Login</button>
     </div>
 </form>
-<form action="import/Login/Register.php">
+<form class="Login_Button" action="import/Login/Register.php">
     <button>Register</button>
 </form>

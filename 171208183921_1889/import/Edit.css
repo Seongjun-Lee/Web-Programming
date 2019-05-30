@@ -108,6 +108,33 @@
 
 /* 버튼 */
 
+input[type="button"].fixed,
+button.fixed,
+.button.fixed {
+    height: 60px;
+    width: 100px;
+    font-size: 13px;
+    color: #FFFFFF;
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    background-color:#BDBDBD;
+    vertical-align: middle;
+    line-height: 60px;
+}
+
+input[type="button"].fixed:hover
+button.fixed:hover,
+.button.fixed:hover {
+    background-color: #999999;
+}
+
+input[type="button"].fixed:active
+button.fixed:active,
+.button.fixed:active {
+    background-color: #ABABAB;
+}
+
 input[type="submit"].PC,
 input[type="reset"].PC,
 input[type="button"].PC,
@@ -247,7 +274,7 @@ button.MB:active,
     margin-top: 15%;
     border-radius: 5px;
     background-color: #323232;
-    width: 75%;
+    width: 40%;
 }
 
 .Login_Table td,
@@ -270,6 +297,13 @@ button.MB:active,
     margin: auto;
 }
 
+.Register_Info {
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+    width: 20%;
+}
+
 .Login_Button {
     margin: 10px;
     text-align: center;
@@ -277,4 +311,10 @@ button.MB:active,
 
 .Login_Button button {
     background-color: #7E7E7E;
+}
+
+#Login_form {
+    display: none;
+    background-color: #000000;
+    width: 50%;
 }
