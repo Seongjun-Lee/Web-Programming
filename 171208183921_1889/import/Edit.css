@@ -255,7 +255,7 @@ button.MB:active,
     background-color: #FFB85A;
 }
 
-/* 로그인창 */
+/* 로그인 회원가입 화면 */
 
 #Login {
     margin-top: 5%;
@@ -317,4 +317,47 @@ button.MB:active,
     display: none;
     background-color: #000000;
     width: 50%;
+}
+
+/* 메인화면 팝업 */
+
+.DevicePop {
+    opacity: 0;
+    display: none;
+    position: relative;
+    width: auto;
+    border: 5px solid #fff;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.thumbnailsPOP {
+    display: none;
+    width: 70%;
+    border-radius: 4px;
+    background-color: #161616;
+}
+
+.thumbnailsPOP .box {
+    background-color: #323232;
+    margin: 1em 1em 1em 1em;
+    width: 30%;
+    z-index: 0;
+    float: left;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .thumbnails .box {
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    .thumbnails .box {
+        width: 100%;
+    }
+
 }

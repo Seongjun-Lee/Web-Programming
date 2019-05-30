@@ -1,10 +1,4 @@
-<!-- class = css 타입 -->
 <!DOCTYPE HTML>
-<!--
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
 		<title>Title Unknown</title>
@@ -13,41 +7,36 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="import/Edit.css" />
 
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.bpopup.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="import/JS/POPUP_Function.js"></script>
+
 	</head>
 	<body id="top">
-        <!-- Banner -->
-        <!--
-            To use a video as your background, set data-video to the name of your video without
-            its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-            formats to work correctly.
-        -->
+
         <?php
             include "import/MainPage/Login-Button.php";
         ?>
 
         <section id="banner" data-video="images/banner">
-        <!-- 배경 이미지는 고사양 게임 스크리샷 흐리게 -->
             <div class="inner">
                 <header>
-                    <h1>Title Unknown</h1> <!-- 제목 미정-->
-                    <!--p>A responsive video gallery template with a functional lightbox<br />
-                    designed by <a href="https://templated.co/">Templated</a> and released under the Creative Commons License.</p-->
+                    <h1>Title Unknown</h1>
                 </header>
                 <a href="#main" class="more">Learn More</a>
             </div>
         </section>
 
-        <!-- Main -->
         <div id="main">
-
             <div class="inner">
-
-            <!-- Boxes -->
-
                 <?php
                 include "import/MainPage/Company.php";
                 ?>
-
             </div>
         </div>
 
@@ -67,14 +56,6 @@
                 </div>
             </footer-->
 
-		<Scripts>
-            <script src="assets/js/jquery.bpopup.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

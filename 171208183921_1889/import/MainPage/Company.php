@@ -4,7 +4,7 @@
             <div class="inner">
                 <h3>PC</h3>
                 <p>PC / VR</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button PC fit" data-poptrox="youtube,800x400">Select</a>
+                <input type="button" id="PC_btn_open" class="button PC fit" value="Select">
             </div>
         </div>
     </div>
@@ -13,8 +13,8 @@
         <div class="image fit"><img src="images/PS4x400.jpg" alt="" />
             <div class="inner">
                 <h3>Sony</h3>
-                <p>Series of PS / PSP / PSVR</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button PS fit" data-poptrox="youtube,800x400">Select</a>
+                <p>Series of PS / PSVITA / PSVR</p>
+                <input type="button" id="PS_btn_open" class="button PS fit" value="Select">
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <div class="inner">
                 <h3>Microsoft</h3>
                 <p>Series of XBOX</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button MS fit" data-poptrox="youtube,800x400">Select</a>
+                <input type="button" id="MS_btn_open" class="button MS fit" value="Select">
             </div>
         </div>
     </div>
@@ -33,8 +33,8 @@
         <div class="image fit"><img src="images/Nintendox400.jpg" alt="" />
             <div class="inner">
                 <h3>Nintendo</h3>
-                <p>Series of DS / Wii / Switch</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button NIN fit" data-poptrox="youtube,800x400">Select</a>
+                <p>Series of DS / Switch</p>
+                <input type="button" id="NIN_btn_open" class="button NIN fit" value="Select">
             </div>
         </div>
     </div>
@@ -44,9 +44,15 @@
             <div class="inner">
                 <h3>Mobile</h3>
                 <p>Android / IOS</p>
-                <!--a class="button MB fit" for="open-pop">Select</a-->
-                <label class="button MB fit" for="Mobile-pop">Select</label>
+                <input type="button" id="MB_btn_open" class="button MB fit" value="Select">
             </div>
         </div>
     </div>
+
+    <?php
+        include "Device/Mobile.php";
+        include "Device/MS.php";
+        include "Device/Nintendo.php";
+        include "Device/Sony.php";
+    ?>
 </div>
