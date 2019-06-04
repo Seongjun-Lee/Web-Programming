@@ -1,9 +1,9 @@
 $(function(){
-    $("#PC_btn_open").click(function(){ //레이어 팝업 열기 버튼 클릭 시
+    $("#DT_btn_open").click(function(){ //레이어 팝업 열기 버튼 클릭 시
         $('#POPPC').bPopup(); //
     });
 
-    $("#PC_btn_close").click(function(){ //닫기
+    $("#DT_btn_close").click(function(){ //닫기
         $('#POPPC').bPopup().close();
     });
 
