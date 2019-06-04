@@ -5,17 +5,16 @@
         <label class="modal_close" for="Mobile-pop"></label>
     </div>
 </div-->
-<?php
-echo "<form method=\"POST\" action=\"import/GameChoice/GameChoice.php\">";
-?>
+
     <div id="POPMB" class="thumbnailsPOP">
+        <form method="POST" action="import/GameChoice/GameChoice.php">
         <div name = "Android" class="box">
             <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
                 <div class="inner">
                     <h3>Android</h3>
                     <?php
                     //echo "<a href=\"import/GameChoice/GameChoice.php?$_POST[Android]\" class=\"button MB fit\" name=\"Andriod\">Select</a>"
-                    echo "<input style=\"display:none\" name=\"Andriod\" value=\"true\"/>";
+                    echo "<input type='hidden' name=\"Andriod\" value=\"true\"/>";
                     echo "<input type=\"submit\" id=\"MB_btn_close\" class=\"button MB fit\" value=\"\"/>";
                     ?>
                 </div>
@@ -31,5 +30,5 @@ echo "<form method=\"POST\" action=\"import/GameChoice/GameChoice.php\">";
                 </div>
             </div>
         </div>
+        </form>
     </div>
-</form>
