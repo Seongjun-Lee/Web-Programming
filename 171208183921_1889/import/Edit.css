@@ -255,6 +255,126 @@ button.MB:active,
     background-color: #FFB85A;
 }
 
+input[type="submit"].GameTitle,
+input[type="reset"].GameTitle,
+input[type="button"].GameTitle,
+button.GameTitle,
+.button.GameTitle {
+    background-color: #EDEDED;
+    color: #000000;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+input[type="submit"].GameTitle:hover,
+input[type="reset"].GameTitle:hover,
+input[type="button"].GameTitle:hover,
+button.GameTitle:hover,
+.button.GameTitle:hover {
+    background-color: #C9C9C9;
+    color: #000000;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+input[type="submit"].GameTitle:active,
+input[type="reset"].GameTitle:active,
+input[type="button"].GameTitle:active,
+button.GameTitle:active,
+.button.GameTitle:active {
+    background-color: #DBDBDB;
+    color: #000000;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+input[type="submit"].MenuButton,
+input[type="reset"].MenuButton,
+input[type="button"].MenuButton,
+button.MenuButton,
+.button.MenuButton {
+    background-color: #EDEDED;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+input[type="submit"].MenuButton:hover,
+input[type="reset"].MenuButton:hover,
+input[type="button"].MenuButton:hover,
+button.MenuButton:hover,
+.button.MenuButton:hover {
+    background-color: #C9C9C9;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+input[type="submit"].MenuButton:active,
+input[type="reset"].MenuButton:active,
+input[type="button"].MenuButton:active,
+button.MenuButton:active,
+.button.MenuButton:active {
+    background-color: #DBDBDB;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+input[type="submit"].GameMenu,
+input[type="reset"].GameMenu,
+input[type="button"].GameMenu,
+button.GameMenu,
+.button.GameMenu {
+    background-color: #EDEDED;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: none;
+}
+
+input[type="submit"].GameMenu:hover,
+input[type="reset"].GameMenu:hover,
+input[type="button"].GameMenu:hover,
+button.GameMenu:hover,
+.button.GameMenu:hover {
+    background-color: #C9C9C9;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: none;
+}
+
+input[type="submit"].GameMenu:active,
+input[type="reset"].GameMenu:active,
+input[type="button"].GameMenu:active,
+button.GameMenu:active,
+.button.GameMenu:active {
+    background-color: #DBDBDB;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: none;
+}
+
 /* 로그인 회원가입 화면 */
 
 #Login {
@@ -360,4 +480,88 @@ button.MB:active,
         width: 100%;
     }
 
+}
+
+/* 상단 고정 메뉴 */
+
+.Menu_fixed {
+    height: 60px;
+    width: 30%;
+    font-size: 13px;
+    color: #FFFFFF;
+    position:fixed;
+    top: 5px;
+    left: 5px;
+    vertical-align: middle;
+    line-height: 60px;
+    z-index: 5;
+}
+
+/* 게임 선택 갤러리 */
+
+#GameSection {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: stretch;
+    -webkit-align-items: stretch;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    z-index: 3;
+
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.GameArticle {
+    width: calc(-1em + 25%);
+    height: 40%;
+    position: relative;
+    border: #0000ff 10px solid;
+    border-radius: 4px;
+    background-color: #EDEDED;
+    margin: 0.5em;
+}
+
+.GameArticle:hover {
+    box-shadow: 0 14px 28px #ffffff, 0 10px 10px #ffffff;
+}
+
+.GameImage {
+    width: 100%;
+    height: 60%;
+    padding: 10px 10px 10px 10px;
+}
+
+.GameP {
+    margin: 0 0 0 0;
+    text-align: center;
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+
+.GameCompany {
+    width: 100%;
+    height: 15%;
+    margin: 0 0 0 0;
+    text-align: center;
+    color: #000000;
+    font-size: x-large;
+}
+
+.GameFont {
+    color: #000000;
+}
+
+#POPGAME {
+    z-index: 4;
 }

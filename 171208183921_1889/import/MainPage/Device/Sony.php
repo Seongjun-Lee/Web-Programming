@@ -1,11 +1,11 @@
-<form method=\"POST\" action=\"import/GameChoice/GameChoice.php\">
-    <div id="POPPS" class="thumbnailsPOP">
+<div id="POPPS" class="thumbnailsPOP">
+    <form method="POST" action="import/GameChoice/GameChoice.php">
         <div name = "PS4" class="box">
             <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
                 <div class="inner">
                     <h3>PS4</h3>
                     <?php
-                    echo "<a href=\"import/GameChoice/GameChoice.php\" class=\"button PS fit\" name=\"PS4\">Select</a>"
+                    echo "<input type=\"submit\" id=\"PS_btn_close\" class=\"button PS fit\" name='Device' value='PS4'/>";
                     ?>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                 <div class="inner">
                     <h3>PS3</h3>
                     <?php
-                    echo "<a href=\"import/GameChoice/GameChoice.php\" class=\"button PS fit\" name=\"PS3\">Select</a>"
+                    echo "<input type=\"submit\" id=\"PS_btn_close\" class=\"button PS fit\" name='Device' value='PS3'/>";
                     ?>
                 </div>
             </div>
@@ -25,10 +25,20 @@
                 <div class="inner">
                     <h3>PSVITA</h3>
                     <?php
-                    echo "<a href=\"import/GameChoice/GameChoice.php\" class=\"button PS fit\" name=\"PSVITA\">Select</a>"
+                    echo "<input type=\"submit\" id=\"PS_btn_close\" class=\"button PS fit\" name='Device' value='PSVITA'/>";
                     ?>
                 </div>
             </div>
         </div>
-    </div>
-</form>
+        <div name = "PSVR" class="box">
+            <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
+                <div class="inner">
+                    <h3>PSVR</h3>
+                    <?php
+                    echo "<input type=\"submit\" id=\"PS_btn_close\" class=\"button PS fit\" name='Device' value='PSVR'/>";
+                    ?>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

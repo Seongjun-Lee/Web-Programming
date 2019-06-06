@@ -4,7 +4,7 @@
             <div class="inner">
                 <h3>PC</h3>
                 <p>PC / VR</p>
-                <input type="button" id="DT_btn_open" class="button PC fit" value="Select">
+                <input type="button" id="PC_btn_open" class="button PC fit" value="Select">
             </div>
         </div>
     </div>
@@ -54,5 +54,6 @@
         include "Device/MS.php";
         include "Device/Nintendo.php";
         include "Device/Sony.php";
+        include "Device/PC.php";
     ?>
 </div>

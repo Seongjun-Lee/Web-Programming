@@ -1,21 +1,21 @@
-<div id="POPPC" class="thumbnailsPOP">
+<div id="POPGAME" class="thumbnailsPOP">
     <form method="POST" action="import/GameChoice/GameChoice.php">
-        <div name = "PC" class="box">
+        <div name = "Android" class="box">
             <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
                 <div class="inner">
-                    <h3>PC</h3>
+                    <h3>Android</h3>
                     <?php
-                    echo "<input type=\"submit\" id=\"PC_btn_close\" class=\"button PC fit\" name='Device' value='PC'/>";
+                    echo "<input type=\"submit\" id=\"MB_btn_close\" class=\"button MB fit\" name='Device' value='Android'/>";
                     ?>
                 </div>
             </div>
         </div>
-        <div name = "VR" class="box">
+        <div name = "Ios" class="box">
             <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
                 <div class="inner">
-                    <h3>VR</h3>
+                    <h3>Ios</h3>
                     <?php
-                    echo "<input type=\"submit\" id=\"PC_btn_close\" class=\"button PC fit\" name='Device' value='VR'/>";
+                    echo "<input type=\"submit\" id=\"MB_btn_close\" class=\"button MB fit\" name='Device' value='Ios'/>";
                     ?>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <?php header("Content-Type:text/html;charset=utf-8");
 
-    $connect = mysql_connect("localhost", "lsj", "2015136093");
+$connect = mysql_connect("localhost", "lsj", "2015136093");
 mysql_select_db("lsj_db", $connect);
 
 if(empty($_POST[id]) || empty($_POST[pw]))

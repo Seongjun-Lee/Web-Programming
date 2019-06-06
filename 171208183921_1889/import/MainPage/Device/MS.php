@@ -1,11 +1,11 @@
-<form method=\"POST\" action=\"import/GameChoice/GameChoice.php\">
-    <div id="POPMS" class="thumbnailsPOP">
+<div id="POPMS" class="thumbnailsPOP">
+    <form method="POST" action="import/GameChoice/GameChoice.php">
         <div name = "xboxone" class="box">
             <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
                 <div class="inner">
                     <h3>XBOX ONE</h3>
                     <?php
-                    echo "<a href=\"import/GameChoice/GameChoice.php\" class=\"button MS fit\" name=\"xboxone\">Select</a>"
+                    echo "<input type=\"submit\" id=\"MS_btn_close\" class=\"button MS fit\" name='Device' value='xboxone'/>";
                     ?>
                 </div>
             </div>
@@ -15,10 +15,10 @@
                 <div class="inner">
                     <h3>XBOX 360</h3>
                     <?php
-                    echo "<a href=\"import/GameChoice/GameChoice.php\" class=\"button MS fit\" name=\"xbox360\">Select</a>"
+                    echo "<input type=\"submit\" id=\"MS_btn_close\" class=\"button MS fit\" name='Device' value='xbox360'/>";
                     ?>
                 </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>

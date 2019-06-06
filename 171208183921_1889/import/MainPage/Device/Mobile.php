@@ -6,16 +6,14 @@
     </div>
 </div-->
 
-    <div id="POPMB" class="thumbnailsPOP">
-        <form method="POST" action="import/GameChoice/GameChoice.php">
+<div id="POPMB" class="thumbnailsPOP">
+    <form method="POST" action="import/GameChoice/GameChoice.php">
         <div name = "Android" class="box">
             <div class="image fit"><img src="images/Samsungx400.bmp" alt="" />
                 <div class="inner">
                     <h3>Android</h3>
                     <?php
-                    //echo "<a href=\"import/GameChoice/GameChoice.php?$_POST[Android]\" class=\"button MB fit\" name=\"Andriod\">Select</a>"
-                    echo "<input type='hidden' name=\"Andriod\" value=\"true\"/>";
-                    echo "<input type=\"submit\" id=\"MB_btn_close\" class=\"button MB fit\" value=\"\"/>";
+                    echo "<input type=\"submit\" id=\"MB_btn_close\" class=\"button MB fit\" name='Device' value='Android'/>";
                     ?>
                 </div>
             </div>
@@ -25,10 +23,10 @@
                 <div class="inner">
                     <h3>Ios</h3>
                     <?php
-                    echo "<a href=\"import/GameChoice/GameChoice.php\" class=\"button MB fit\" name=\"Ios\">Select</a>"
+                    echo "<input type=\"submit\" id=\"MB_btn_close\" class=\"button MB fit\" name='Device' value='Ios'/>";
                     ?>
                 </div>
             </div>
         </div>
-        </form>
-    </div>
+    </form>
+</div>
