@@ -47,27 +47,35 @@ $(function(){
         $('#POPGAME').bPopup().close();
     });
 
+    $("#USER_btn_open").click(function(){ //레이어 팝업 열기 버튼 클릭 시
+        $('#POPUSER').bPopup(); //
+    });
+
+    $("#USER_btn_close").click(function(){ //닫기
+        $('#POPUSER').bPopup().close();
+    });
+
     $("#MenuButton").click(function(){
-        if($('input[type="submit"].GameMenu').css("display") == "none") {
-            $('input[type="submit"].GameMenu').css({
+        if($('input[type="button"].GameMenu').css("display") == "none") {
+            $('input[type="button"].GameMenu').css({
                 display: "inherit"
             });
-            $('input[type="submit"].GameMenu:hover').css({
+            $('input[type="button"].GameMenu:hover').css({
                 display: "inherit"
             });
-            $('input[type="submit"].GameMenu:active').css({
+            $('input[type="button"].GameMenu:active').css({
                 display: "inherit"
             });
         }
         else
         {
-            $('input[type="submit"].GameMenu').css({
+            $('input[type="button"].GameMenu').css({
                 display: "none"
             });
-            $('input[type="submit"].GameMenu:hover').css({
+            $('input[type="button"].GameMenu:hover').css({
                 display: "none"
             });
-            $('input[type="submit"].GameMenu:active').css({
+            $('input[type="button"].GameMenu:active').css({
                 display: "none"
             });
         }

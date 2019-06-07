@@ -141,6 +141,7 @@ input[type="button"].PC,
 button.PC,
 .button.PC {
     background-color: #7E7E7E;
+    color: #FFFFFF;
 }
 
 input[type="submit"].PC:hover,
@@ -149,6 +150,7 @@ input[type="button"].PC:hover,
 button.PC:hover,
 .button.PC:hover {
     background-color: #5A5A5A;
+    color: #FFFFFF;
 }
 
 input[type="submit"].PC:active,
@@ -157,6 +159,7 @@ input[type="button"].PC:active,
 button.PC:active,
 .button.PC:active {
     background-color: #6C6C6C;
+    color: #FFFFFF;
 }
 
 input[type="submit"].PS,
@@ -165,6 +168,7 @@ input[type="button"].PS,
 button.PS,
 .button.PS {
     background-color: #6D6CFF;
+    color: #FFFFFF;
 }
 
 input[type="submit"].PS:hover,
@@ -173,6 +177,7 @@ input[type="button"].PS:hover,
 button.PS:hover,
 .button.PS:hover {
     background-color: #4948FF;
+    color: #FFFFFF;
 }
 
 input[type="submit"].PS:active,
@@ -181,6 +186,7 @@ input[type="button"].PS:active,
 button.PS:active,
 .button.PS:active {
     background-color: #5B5AFF;
+    color: #FFFFFF;
 }
 
 input[type="submit"].MS,
@@ -189,6 +195,7 @@ input[type="button"].MS,
 button.MS,
 .button.MS {
     background-color: #89FF82;
+    color: #FFFFFF;
 }
 
 input[type="submit"].MS:hover,
@@ -197,6 +204,7 @@ input[type="button"].MS:hover,
 button.MS:hover,
 .button.MS:hover {
     background-color: #65FF5E;
+    color: #FFFFFF;
 }
 
 input[type="submit"].MS:active,
@@ -205,6 +213,7 @@ input[type="button"].MS:active,
 button.MS:active,
 .button.MS:active {
     background-color: #77FF70;
+    color: #FFFFFF;
 }
 
 input[type="submit"].NIN,
@@ -213,6 +222,7 @@ input[type="button"].NIN,
 button.NIN,
 .button.NIN {
     background-color: #FF6C6C;
+    color: #FFFFFF;
 }
 
 input[type="submit"].NIN:hover,
@@ -221,6 +231,7 @@ input[type="button"].NIN:hover,
 button.NIN:hover,
 .button.NIN:hover {
     background-color: #FF4848;
+    color: #FFFFFF;
 }
 
 input[type="submit"].NIN:active,
@@ -229,6 +240,7 @@ input[type="button"].NIN:active,
 button.NIN:active,
 .button.NIN:active {
     background-color: #FF5A5A;
+    color: #FFFFFF;
 }
 
 input[type="submit"].MB,
@@ -237,6 +249,7 @@ input[type="button"].MB,
 button.MB,
 .button.MB {
     background-color: #FFCA6C;
+    color: #FFFFFF;
 }
 
 input[type="submit"].MB:hover,
@@ -245,6 +258,7 @@ input[type="button"].MB:hover,
 button.MB:hover,
 .button.MB:hover {
     background-color: #FFA648;
+    color: #FFFFFF;
 }
 
 input[type="submit"].MB:active,
@@ -253,6 +267,7 @@ input[type="button"].MB:active,
 button.MB:active,
 .button.MB:active {
     background-color: #FFB85A;
+    color: #FFFFFF;
 }
 
 input[type="submit"].GameTitle,
@@ -339,7 +354,7 @@ input[type="button"].GameMenu,
 button.GameMenu,
 .button.GameMenu {
     background-color: #EDEDED;
-    color: #000000;
+    color: #FFFFFF;
     height: 100%;
     width: 30%;
     margin: 0 0 0 0;
@@ -353,7 +368,7 @@ input[type="button"].GameMenu:hover,
 button.GameMenu:hover,
 .button.GameMenu:hover {
     background-color: #C9C9C9;
-    color: #000000;
+    color: #FFFFFF;
     height: 100%;
     width: 30%;
     margin: 0 0 0 0;
@@ -367,7 +382,7 @@ input[type="button"].GameMenu:active,
 button.GameMenu:active,
 .button.GameMenu:active {
     background-color: #DBDBDB;
-    color: #000000;
+    color: #FFFFFF;
     height: 100%;
     width: 30%;
     margin: 0 0 0 0;
@@ -461,7 +476,7 @@ button.GameMenu:active,
 .thumbnailsPOP .box {
     background-color: #323232;
     margin: 1em 1em 1em 1em;
-    width: 30%;
+    width: calc(-2em + 33.3333%);
     z-index: 0;
     float: left;
 }
@@ -512,6 +527,8 @@ button.GameMenu:active,
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: space-between;
+    flex: auto;
     padding-top: 20px;
     z-index: 3;
 
@@ -521,18 +538,102 @@ button.GameMenu:active,
     margin-right: 15%;
 }
 
-.GameArticle {
-    width: calc(-1em + 25%);
-    height: 40%;
+.GameArticle0 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
     position: relative;
-    border: #0000ff 10px solid;
+    border: #8C8C8C 10px solid;
     border-radius: 4px;
-    background-color: #EDEDED;
     margin: 0.5em;
+    flex: auto;
 }
 
-.GameArticle:hover {
-    box-shadow: 0 14px 28px #ffffff, 0 10px 10px #ffffff;
+.GameArticle0:hover {
+    box-shadow: 0 14px 28px #EAEAEA, 0 10px 10px #EAEAEA;
+}
+
+.GameArticle1 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
+    position: relative;
+    border: #F15F5F 10px solid;
+    border-radius: 4px;
+    margin: 0.5em;
+    flex: auto;
+}
+
+.GameArticle1:hover {
+    box-shadow: 0 14px 28px #FFD8D8, 0 10px 10px #FFD8D8;
+}
+
+.GameArticle2 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
+    position: relative;
+    border: #F29661 10px solid;
+    border-radius: 4px;
+    margin: 0.5em;
+    flex: auto;
+}
+
+.GameArticle2:hover {
+    box-shadow: 0 14px 28px #FAE0D4, 0 10px 10px #FAE0D4;
+}
+
+.GameArticle3 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
+    position: relative;
+    border: #F2CB61 10px solid;
+    border-radius: 4px;
+    margin: 0.5em;
+    flex: auto;
+}
+
+.GameArticle3:hover {
+    box-shadow: 0 14px 28px #FAECC5, 0 10px 10px #FAECC5;
+}
+
+.GameArticle4 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
+    position: relative;
+    border: #86E57F 10px solid;
+    border-radius: 4px;
+    margin: 0.5em;
+    flex: auto;
+}
+
+.GameArticle4:hover {
+    box-shadow: 0 14px 28px #CEFBC9, 0 10px 10px #CEFBC9;
+}
+
+.GameArticle5 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
+    position: relative;
+    border: #5CD1E5 10px solid;
+    border-radius: 4px;
+    margin: 0.5em;
+    flex: auto;
+}
+
+.GameArticle5:hover {
+    box-shadow: 0 14px 28px #D4F4FA, 0 10px 10px #D4F4FA;
+}
+
+.GameArticle6 {
+    /*width: calc(-1em + 25%);*/
+    /*height: 40%;*/
+    position: relative;
+    border: #6B66FF 10px solid;
+    border-radius: 4px;
+    margin: 0.5em;
+    flex: auto;
+}
+
+.GameArticle6:hover {
+    box-shadow: 0 14px 28px #DAD9FF, 0 10px 10px #DAD9FF;
 }
 
 .GameImage {
