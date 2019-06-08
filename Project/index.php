@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Title Unknown</title>
+		<title>Gamer's Hangout</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,13 +15,13 @@
 	<body id="top">
 
         <?php
-            include "import/MainPage/Login-Button.php";
+            include "import/Login/Login_Button.php";
         ?>
 
         <section id="banner" data-video="images/banner">
             <div class="inner">
                 <header>
-                    <h1>Title Unknown</h1>
+                    <h1>Gamer's Hangout</h1>
                 </header>
                 <a href="#main" class="more">Learn More</a>
             </div>
@@ -57,4 +57,6 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
 	</body>
+
+
 </html>

@@ -3,7 +3,7 @@
 $connect = mysql_connect("localhost", "lsj", "2015136093");
 mysql_select_db("lsj_db", $connect);
 
-if(empty($_POST[name]) || empty($_POST[id]) || empty($_POST[pw]) || empty($_POST[email]) || empty($_POST[nickname]))
+if(empty($_POST[Rname]) || empty($_POST[Rid]) || empty($_POST[Rpw]) || empty($_POST[Remail]) || empty($_POST[Rnickname]))
     echo "
     <script>
     alert('빈 칸이 있으면 안됩니다')
@@ -11,29 +11,22 @@ if(empty($_POST[name]) || empty($_POST[id]) || empty($_POST[pw]) || empty($_POST
     </script>
     ";
 else {
-    $check = "select * from Register where user_id ='$_POST[name]'";
+    $check = "select * from RegisterDB where user_id ='$_POST[Rid]'";
 
-    $result = mysql_query($check);
+    $result = mysql_query($check, $connect);
+    $array = mysql_fetch_array($result);
 
-    if(empty($result)) {
-        $sql = "insert into register (name, user_id, user_pw, email, user_name) values('$_POST[name]', '$_POST[id]', '$_POST[pw]', '$_POST[email]', '$_POST[nickname]')";
+    if(empty($array[name])) {
+        $sql = "insert into RegisterDB (name, user_id, user_pw, email, user_name) values('$_POST[Rname]', '$_POST[Rid]', '$_POST[Rpw]', '$_POST[Remail]', '$_POST[Rnickname]')";
 
-        $result = mysql_query($sql);
+        $result2 = mysql_query($sql, $connect);
 
-        if (!result)
-            echo "
-            <script>
-            alert('에러')
-            location.replace('Register.php');
-            </script>
-            ";
-        else
-            echo "
-            <script>
-            alert('회원가입 완료')
-            location.replace('../../index.php');
-            </script>
-            ";
+        echo "
+        <script>
+        alert('회원가입 완료')
+        location.replace('../../index.php');
+        </script>
+        ";
     }
     else
     {

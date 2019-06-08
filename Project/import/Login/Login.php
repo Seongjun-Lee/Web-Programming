@@ -3,7 +3,7 @@ echo "
 <form method=\"POST\" action=\"import/Login/Login_Check.php\">
 "
 ?>
-    <div id="Login">
+    <div id="Login" style="height: 60%">
         <table class="Login_Table">
             <tr>
                 <td>
@@ -23,10 +23,8 @@ echo "
             </tr>
         </table>
     </div>
-    <div class="Login_Button">
-        <button>Login</button>
+    <div class="Login_Button" style="height: 40%">
+        <input type="submit" class="button PC" value="Login"/>
+        <a href="import/Login/Register.php" class="button PC">Register</a>
     </div>
-</form>
-<form class="Login_Button" action="import/Login/Register.php">
-    <button>Register</button>
 </form>

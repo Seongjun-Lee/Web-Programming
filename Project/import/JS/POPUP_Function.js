@@ -55,6 +55,14 @@ $(function(){
         $('#POPUSER').bPopup().close();
     });
 
+    $("#LoginButton_open").click(function(){ //레이어 팝업 열기 버튼 클릭 시
+        $('#LoginPOP').bPopup(); //
+    });
+
+    $("#LoginButton_close").click(function(){ //닫기
+        $('#LoginPOP').bPopup().close();
+    });
+
     $("#MenuButton").click(function(){
         if($('input[type="button"].GameMenu').css("display") == "none") {
             $('input[type="button"].GameMenu').css({
