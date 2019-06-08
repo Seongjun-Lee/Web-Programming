@@ -1,3 +1,7 @@
+<?php
+session_cache_expire(360);
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -21,7 +25,7 @@
         <section id="banner" data-video="images/banner">
             <div class="inner">
                 <header>
-                    <h1>Gamer's Hangout</h1>
+                    <h1 style="font-family: inherit">Gamer's Hangout</h1>
                 </header>
                 <a href="#main" class="more">Learn More</a>
             </div>
@@ -59,4 +63,7 @@
 	</body>
 
 
+<?php
+//    session_destroy();
+?>
 </html>

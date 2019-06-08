@@ -1,5 +1,5 @@
 <?php header("Content-Type:text/html;charset=utf-8");
-
+session_cache_expire(360);
 session_start();
 
 $connect = mysql_connect("localhost", "lsj", "2015136093");
@@ -33,14 +33,10 @@ else
             </script>
             ");
         else {
-            echo("
-            <script>
-            alert('로그인 완료')
-            </script>
-            ");
-            $_SESSION['Sname'] = $row[name];
-            $_SESSION['Suser_id'] = $row[user_id];
-            $_SESSION['Suser_name'] = $row[user_name];
+            $_SESSION[Login] = "YES";
+            $_SESSION[Sname] = $row[name];
+            $_SESSION[Suser_id] = $row[user_id];
+            $_SESSION[Suser_name] = $row[user_name];
         }
     }
 }

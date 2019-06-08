@@ -1,5 +1,6 @@
 <?php //header("Content-Type:text/html;charset=utf-8");
-
+session_cache_expire(360);
+session_start();
 $connect = mysql_connect("localhost", "lsj", "2015136093");
 mysql_select_db("lsj_db", $connect);
 
@@ -30,23 +31,24 @@ mysql_select_db("lsj_db", $connect);
 
 </head>
 <body>
-<form method="POST" action="GameChoice.php">
-    <div class="Menu_fixed">
-        <input type="button" id="MenuButton" class="MenuButton" value="Menu" /><br>
-        <table>
-            <tr><input type="button" id="PC_btn_open" class="GameMenu" style="background-color: #7E7E7E" name="Device" value="PC"></tr>
-            <tr><input type="button" id="PS_btn_open" class="GameMenu" style="background-color: #6D6CFF" name="Device" value="Sony"></tr>
-            <tr><input type="button" id="MS_btn_open" class="GameMenu" style="background-color: #89FF82" name="Device" value="Microsoft"></tr>
-            <tr><input type="button" id="NIN_btn_open" class="GameMenu" style="background-color: #FF6C6C" name="Device" value="Nintendo"></tr>
-            <tr><input type="button" id="MB_btn_open" class="GameMenu" style="background-color: #FFCA6C" name="Device" value="Mobile"></tr>
-            <tr><input type="button" id="USER_btn_open" class="GameMenu" style="background-color: #7E7E7E" name="User Info" value="User Info"></tr>
-        </table>
-    </div>
-<form>
 
-<form method="POST" action="GamePOP.php">
+<div class="Menu_fixed">
+    <input type="button" id="MenuButton" class="MenuButton" value="Menu" /><br>
+    <table>
+        <tr><input type="button" id="PC_btn_open" class="GameMenu" style="background-color: #7E7E7E" name="Device" value="PC"></tr>
+        <tr><input type="button" id="PS_btn_open" class="GameMenu" style="background-color: #6D6CFF" name="Device" value="Sony"></tr>
+        <tr><input type="button" id="MS_btn_open" class="GameMenu" style="background-color: #89FF82" name="Device" value="Microsoft"></tr>
+        <tr><input type="button" id="NIN_btn_open" class="GameMenu" style="background-color: #FF6C6C" name="Device" value="Nintendo"></tr>
+        <tr><input type="button" id="MB_btn_open" class="GameMenu" style="background-color: #FFCA6C" name="Device" value="Mobile"></tr>
+<!--            <tr><input type="button" id="USER_btn_open" class="GameMenu" style="background-color: #7E7E7E" name="User Info" value="Main Page"></tr>-->
+        <tr><input type="button" id="MainPage_btn" class="GameMenu" style="background-color: #7E7E7E" value="Main Page"></tr>
+    </table>
+</div>
+
+<form method="POST" action="../../Community/gesipan.php">
     <?php
     $sql = "select * from GameDB where device='$_POST[Device]'";
+    $_SESSION[Sdevice] = $_POST[Device];
     $result = mysql_query($sql);
     $num = 0;
     while($array = mysql_fetch_array($result))
@@ -106,7 +108,6 @@ mysql_select_db("lsj_db", $connect);
 
         if($pos == 0)
             echo "<ul>";
-
         echo "<li class='$border' style='background-color:$back'>";
 
         echo "
@@ -114,7 +115,7 @@ mysql_select_db("lsj_db", $connect);
             ";
         echo "
             <p class='GameP'>
-            <input type='submit' class='GameTitle' style='font-size:large; background-color:$back' name ='title' value='$array[title]' />
+            <input type='submit' class='GameTitle' style='font-size:large; background-color:$back' name ='title' value='$array[title]'/>
             </p>
             ";
         echo "

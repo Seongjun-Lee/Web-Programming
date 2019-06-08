@@ -63,6 +63,11 @@ $(function(){
         $('#LoginPOP').bPopup().close();
     });
 
+    $("#MainPage_btn").click(function(){ //닫기
+        location.replace('../../index.php');
+    });
+
+
     $("#MenuButton").click(function(){
         if($('input[type="button"].GameMenu').css("display") == "none") {
             $('input[type="button"].GameMenu').css({

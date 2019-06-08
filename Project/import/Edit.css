@@ -41,7 +41,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 40%;
+    width: 50%;
     margin: auto;
     overflow: auto;
     background-color: #161616;
@@ -426,6 +426,21 @@ button.GameMenu:active,
     text-align: center;
 }
 
+.UserInfo_Table {
+    margin: auto;
+    border-radius: 5px;
+    background-color: #323232;
+    width: 80%;
+    color: #ffffff;
+}
+
+.UserInfo_Table td,
+.UserInfo_Table tr {
+    vertical-align: middle;
+    padding: 1%;
+    text-align: center;
+}
+
 .Login_Info {
     color: #FFFFFF;
     text-align: center;
@@ -433,6 +448,13 @@ button.GameMenu:active,
 }
 
 .Register_Info {
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+    width: 20%;
+}
+
+.User_Info {
     color: #FFFFFF;
     text-align: center;
     margin: auto;
