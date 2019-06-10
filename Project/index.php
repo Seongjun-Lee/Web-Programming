@@ -1,6 +1,8 @@
 <?php
 session_cache_expire(360);
 session_start();
+
+$_SESSION[SPage] = "http://localhost/Project/index.php";
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -8,12 +10,30 @@ session_start();
 		<title>Gamer's Hangout</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="import/Edit.css" />
+		<link rel="stylesheet" href="assets/css/main.css?after" />
+        <link rel="stylesheet" href="import/Edit.css?after" />
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.bpopup.min.js"></script>
         <script src="import/JS/POPUP_Function.js"></script>
+
+        <script type="text/javascript">
+            function Keycode(e){
+                var code = (window.event) ? event.keyCode : e.which; //IE : FF - Chrome both
+                if (code > 32 && code < 48) nAllow(e);
+                if (code > 57 && code < 65) nAllow(e);
+                if (code > 90 && code < 97) nAllow(e);
+                if (code > 122 && code < 127) nAllow(e);
+            }
+            function nAllow(e){
+                alert('특수문자는 사용할수 없습니다.');
+                if(navigator.appName!="Netscape"){ //for not returning keycode value
+                    event.returnValue = false;  //IE ,  - Chrome both
+                }else{
+                    e.preventDefault(); //FF ,  - Chrome both
+                }
+            }
+        </script>
 
 	</head>
 	<body id="top">
@@ -22,7 +42,8 @@ session_start();
             include "import/Login/Login_Button.php";
         ?>
 
-        <section id="banner" data-video="images/banner">
+<!--        <section id="banner" data-video="images/banner">-->
+        <section id="banner" data-video="https://youtu.be/ktNvh63KkQQ?t=3">
             <div class="inner">
                 <header>
                     <h1 style="font-family: inherit">Gamer's Hangout</h1>
@@ -39,21 +60,6 @@ session_start();
             </div>
         </div>
 
-        <!-- Footer >
-            <footer id="footer">
-                <div class="inner">
-                    <h2>Etiam veroeros lorem</h2>
-                    <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
-
-                    <ul class="icons">
-                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-                    </ul>
-                    <p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
-                </div>
-            </footer-->
         <Scripts>
             <script src="assets/js/jquery.scrolly.min.js"></script>
             <script src="assets/js/jquery.poptrox.min.js"></script>

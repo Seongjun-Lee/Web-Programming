@@ -33,16 +33,18 @@ else
             </script>
             ");
         else {
-            $_SESSION[Login] = "YES";
+            $_SESSION[Login] = true;
             $_SESSION[Sname] = $row[name];
             $_SESSION[Suser_id] = $row[user_id];
             $_SESSION[Suser_name] = $row[user_name];
         }
     }
 }
-?>
-
+echo"
 <script>
 //location.replace('../../index.php');
-    location.replace('../../index.php');
+    location.replace('$_SESSION[SPage]');
 </script>
+";
+?>
+

@@ -1,7 +1,7 @@
 <div id="POPPS" class="thumbnailsPOP">
     <form method="POST" action="http://localhost/Project/import/MainPage/GameChoice.php">
         <div name = "PS4" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/PS4x400.jpg" alt="" />
                 <div class="inner">
                     <h3>PS4</h3>
                     <?php
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div name = "PS3" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/PS3x400.jpg" alt="" />
                 <div class="inner">
                     <h3>PS3</h3>
                     <?php
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div name = "PSVITA" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/PSVITAx400.jpg" alt="" />
                 <div class="inner">
                     <h3>PSVITA</h3>
                     <?php
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div name = "PSVR" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/PSVRx400.jpg" alt="" />
                 <div class="inner">
                     <h3>PSVR</h3>
                     <?php

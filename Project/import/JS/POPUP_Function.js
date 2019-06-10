@@ -56,15 +56,43 @@ $(function(){
     });
 
     $("#LoginButton_open").click(function(){ //레이어 팝업 열기 버튼 클릭 시
-        $('#LoginPOP').bPopup(); //
+        $('#POPUSER').bPopup(); //
     });
 
     $("#LoginButton_close").click(function(){ //닫기
-        $('#LoginPOP').bPopup().close();
+        $('#POPUSER').bPopup().close();
+    });
+
+    $("#LoginButton_openCom").click(function(){ //레이어 팝업 열기 버튼 클릭 시
+        $('#POPCOM').bPopup(); //
+    });
+
+    $("#LoginButton_closeCom").click(function(){ //닫기
+        $('#POPCOM').bPopup().close();
     });
 
     $("#MainPage_btn").click(function(){ //닫기
-        location.replace('../../index.php');
+        location.replace('http://localhost/Project/index.php');
+    });
+
+    $("#Device_btn").click(function(){ //닫기
+        location.replace('http://localhost/Project/import/MainPage/GameChoice.php');
+    });
+
+    $("#Back_btn").click(function(){ //닫기
+        $('#POPUSER').bPopup(); //
+    });
+
+    $("#ADD_btn_open").click(function(){ //레이어 팝업 열기 버튼 클릭 시
+        $('#POPADD').bPopup(); //
+    });
+
+    $("#ADD_btn_close").click(function(){ //닫기
+        $('#POPADD').bPopup().close();
+    });
+
+    $("#GameOption").click(function(){ //닫기
+        $('#POPOption').bPopup();
     });
 
 

@@ -11,7 +11,7 @@
             </div>
         </div>
         <div name = "VR" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/VRx400.jpg" alt="" />
                 <div class="inner">
                     <h3>VR</h3>
                     <?php

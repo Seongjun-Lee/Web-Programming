@@ -1,7 +1,7 @@
 <div id="POPMS" class="thumbnailsPOP">
     <form method="POST" action="http://localhost/Project/import/MainPage/GameChoice.php">
         <div name = "xboxone" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/Xboxx400.jpg" alt="" />
                 <div class="inner">
                     <h3>XBOX ONE</h3>
                     <?php
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div name = "xbox360" class="box">
-            <div class="image fit"><img src="http://localhost/Project/images/Samsungx400.bmp" alt="" />
+            <div class="image fit"><img src="http://localhost/Project/images/XBOX360x400.png" alt="" />
                 <div class="inner">
                     <h3>XBOX 360</h3>
                     <?php

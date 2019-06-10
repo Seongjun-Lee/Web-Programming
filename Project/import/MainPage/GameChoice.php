@@ -4,14 +4,15 @@ session_start();
 $connect = mysql_connect("localhost", "lsj", "2015136093");
 mysql_select_db("lsj_db", $connect);
 
+$_SESSION[SPage] = "http://localhost/Project/import/MainPage/Gamechoice.php";
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../assets/css/main.css" />
-    <link rel="stylesheet" href="../Edit.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css?after" />
+    <link rel="stylesheet" href="../Edit.css?after" />
 
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/jquery.bpopup.min.js"></script>
@@ -26,8 +27,25 @@ mysql_select_db("lsj_db", $connect);
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script type="text/javascript">
+        function Keycode(e){
+            var code = (window.event) ? event.keyCode : e.which; //IE : FF - Chrome both
+            if (code > 32 && code < 48) nAllow(e);
+            if (code > 57 && code < 65) nAllow(e);
+            if (code > 90 && code < 97) nAllow(e);
+            if (code > 122 && code < 127) nAllow(e);
+        }
+        function nAllow(e){
+            alert('특수문자는 사용할수 없습니다.');
+            if(navigator.appName!="Netscape"){ //for not returning keycode value
+                event.returnValue = false;  //IE ,  - Chrome both
+            }else{
+                e.preventDefault(); //FF ,  - Chrome both
+            }
+        }
+    </script>
 
-    <title>GameSelect</title>
+    <title>Gamer's Hangout</title>
 
 </head>
 <body>
@@ -40,23 +58,55 @@ mysql_select_db("lsj_db", $connect);
         <tr><input type="button" id="MS_btn_open" class="GameMenu" style="background-color: #89FF82" name="Device" value="Microsoft"></tr>
         <tr><input type="button" id="NIN_btn_open" class="GameMenu" style="background-color: #FF6C6C" name="Device" value="Nintendo"></tr>
         <tr><input type="button" id="MB_btn_open" class="GameMenu" style="background-color: #FFCA6C" name="Device" value="Mobile"></tr>
-<!--            <tr><input type="button" id="USER_btn_open" class="GameMenu" style="background-color: #7E7E7E" name="User Info" value="Main Page"></tr>-->
-        <tr><input type="button" id="MainPage_btn" class="GameMenu" style="background-color: #7E7E7E" value="Main Page"></tr>
+        <tr><input type="button" id="ADD_btn_open" class="GameMenu" style="background-color: #FCFCFC; color: #000000" value="Add Game"></tr>
+        <tr><input type="button" id="LoginButton_open" class="GameMenu" style="background-color: #7E7E7E" value="User Info"></tr>
+        <tr><input type="button" id="MainPage_btn" class="GameMenu" style="background-color: #323232" value="Main Page"></tr>
     </table>
 </div>
 
-<form method="POST" action="../../Community/gesipan.php">
+<div class="Add_fixed">
+
+</div>
+
+<form method="POST" action="../../Community/gesipan.php?num=0">
     <?php
-    $sql = "select * from GameDB where device='$_POST[Device]'";
-    $_SESSION[Sdevice] = $_POST[Device];
+    if($_POST[Device] == NULL && $_SESSION[Sdevice] != NULL)
+        $sql = "select * from GameDB where device='$_SESSION[Sdevice]'";
+    else if($_POST[Device] != NULL)
+        $sql = "select * from GameDB where device='$_POST[Device]'";
+    else if($_POST[Device] == NULL && $_SESSION[Sdevice] == NULL)
+        $sql = "select * from GameDB where device='PC'";
     $result = mysql_query($sql);
     $num = 0;
     while($array = mysql_fetch_array($result))
         $num++;
-    $branch = intval($num / 4);
+    $rest = 0;
+    $branch = 0;
+    $roundbranch = $num / 4;
+    if($num % 4 != 0) {
+        $branch = ceil($num / 4);
+        $rest = $num % 4;
+    }
+    else if($num % 4 == 0)
+        $branch = $num / 4;
 
-    $sql2 = "select * from GameDB where device='$_POST[Device]'";
+    if($_POST[Device] == NULL && $_SESSION[Sdevice] != NULL) {
+        $sql2 = "select * from GameDB where device='$_SESSION[Sdevice]'";
+        $_POST[Device] = $_SESSION[Sdevice];
+    }
+    else if($_POST[Device] != NULL) {
+        $sql2 = "select * from GameDB where device='$_POST[Device]'";
+        $_SESSION[Sdevice] = $_POST[Device];
+    }
+    else if($_POST[Device] == NULL && $_SESSION[Sdevice] == NULL) {
+        $sql2 = "select * from GameDB where device='PC'";
+        $_SESSION[Sdevice] = 'PC';
+        $_POST[Device] = 'PC';
+    }
+
     $result2 = mysql_query($sql2);
+
+//    $_SESSION[Sdevice] = $_POST[Device];
 
     switch($_POST[Device])
     {
@@ -85,7 +135,6 @@ mysql_select_db("lsj_db", $connect);
             break;
     }
 
-    //echo "<table class = \"GameTable\">";
     echo "<section id='GameSection'>";
     echo("<div class=\"boardz centered-block\">");
     $pos = 0;
@@ -105,7 +154,6 @@ mysql_select_db("lsj_db", $connect);
             $border = 'GameArticle5';
         else if($array[point] >= 90 and $array[point] <= 100)
             $border = 'GameArticle6';
-
         if($pos == 0)
             echo "<ul>";
         echo "<li class='$border' style='background-color:$back'>";
@@ -115,7 +163,10 @@ mysql_select_db("lsj_db", $connect);
             ";
         echo "
             <p class='GameP'>
-            <input type='submit' class='GameTitle' style='font-size:large; background-color:$back' name ='title' value='$array[title]'/>
+            ";?>
+            <input type='submit' class='GameTitle' style='background-color:$back;' name ='title' value="<?echo$array[title]?>"/>
+        <?php
+        echo"
             </p>
             ";
         echo "
@@ -127,19 +178,27 @@ mysql_select_db("lsj_db", $connect);
 
         if($pos == $branch) {
             echo("</ul>");
+            if($rest != 0) {
+                $rest--;
+                if ($rest == 0)
+                    $branch--;
+            }
             $pos = 0;
         }
     }
     echo("</div>");
     echo "</section>";
-
-    include "Device/Mobile.php";
-    include "Device/MS.php";
-    include "Device/Nintendo.php";
-    include "Device/Sony.php";
-    include "Device/PC.php";
-    include "User.php";
     ?>
 </form>
+
+<?php
+include "Device/Mobile.php";
+include "Device/MS.php";
+include "Device/Nintendo.php";
+include "Device/Sony.php";
+include "Device/PC.php";
+include "Popup.php";
+include "AddGamePop.php";
+?>
 </body>
 </html>
