@@ -60,8 +60,8 @@ if($_SESSION[Sgame] == NULL || (($_SESSION[Sgame] != $_POST[title]) && ($_POST[t
     <table>
         <tr><input type="button" id="Device_btn" class="GameMenu" style="background-color: #FCFCFC; color: #000000; font-size:11pt" value="Game Select"></tr>
         <tr><input type="button" id="LoginButton_openCom" class="GameMenu" style="background-color: #7E7E7E; font-size:11pt" value="User Info"></tr>
+        <tr><input type="button" id="DeleteGesipan_btn" class="GameMenu" style="background-color: #161616; font-size:11pt" value="Delete Game"></tr>
         <tr><input type="button" id="MainPage_btn" class="GameMenu" style="background-color: #323232; font-size:11pt" value="Main Page"></tr>
-
     </table>
 </div>
 
@@ -93,6 +93,7 @@ else if($array[point] >= 90 and $array[point] <= 100)
     <div style="background-color: #000000" id="board_area">
         <h1 style="color: #ffffff; border: 5px solid <?echo$border?>; border-radius: 4px; text-align: center; padding-top: 10px; padding-bottom: 10px; background-color: #323232"><?php echo$_SESSION[Sgame]?> / <?php echo$_SESSION[Sdevice]?></h1>
         <h3 style="text-align: right; margin: 0 0 0 0; padding-top: 10px; color: #ffffff">제작사 : <?php echo$array[company]?></h3>
+        <label style="float: left; background-color: <?echo$border?>; font-size: 25px; width: 100px" class="label label-default"><?php echo $array[point];?></label>
         <?php
         if($array[location] != NULL)
             echo"

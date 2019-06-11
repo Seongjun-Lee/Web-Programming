@@ -95,6 +95,10 @@ $(function(){
         $('#POPOption').bPopup();
     });
 
+    $("#DeleteGesipan_btn").click(function(){ //닫기
+        location.replace('http://localhost/Project/Community/DeleteGame.php');
+    });
+
 
     $("#MenuButton").click(function(){
         if($('input[type="button"].GameMenu').css("display") == "none") {
