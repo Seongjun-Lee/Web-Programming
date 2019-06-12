@@ -42,8 +42,7 @@ $_SESSION[SPage] = "http://localhost/Project/index.php";
             include "import/Login/Login_Button.php";
         ?>
 
-<!--        <section id="banner" data-video="images/banner">-->
-        <section id="banner" data-video="https://youtu.be/ktNvh63KkQQ?t=3">
+        <section id="banner" data-video="images/banner">
             <div class="inner">
                 <header>
                     <h1 style="font-family: inherit">Gamer's Hangout</h1>
